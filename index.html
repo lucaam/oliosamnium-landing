@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Olio Samnium — Presto online</title>
+  <meta name="description" content="Il nostro olio extra vergine di oliva — il nuovo sito del frantoio è in arrivo.">
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --beige:#f8edd8;
+      --pesca:#e0b873;
+      --terracotta:#a95a18;
+      --verde-oliva:#9e9c5c;
+      --marrone:#362518;
+    }
+    body{font-family:'Libre Franklin',system-ui,-apple-system,Segoe UI,Roboto;}
+    .brand{font-family:'Playfair Display',serif}
+    .glass{background:rgba(255,255,255,0.6);backdrop-filter:blur(6px);}
+  </style>
+</head>
+<body class="min-h-screen bg-[linear-gradient(180deg,var(--beige),white)] flex items-center justify-center p-6">
+  <main class="max-w-4xl w-full mx-auto">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="p-8 rounded-2xl glass shadow-lg">
+        <a href="#" class="inline-flex items-center gap-3 mb-6">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="rounded-full p-1" style="background:var(--beige);">
+            <path d="M12 2C12 2 9 6 12 9C15 12 20 12 20 12" stroke="var(--verde-oliva)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 12C6 12 9 16 12 14C15 12 16 9 16 9" stroke="var(--verde-oliva)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="6.5" cy="17.5" r="3" stroke="var(--verde-oliva)" stroke-width="1.2"/>
+          </svg>
+          <span class="brand text-2xl text-[var(--marrone)]">Samnium - <span class="text-sm text-[var(--terracotta)]">Produzione Artigianale</span></span>
+        </a>
+
+        <h1 class="text-3xl md:text-4xl font-semibold text-[var(--marrone)] leading-tight">Stiamo spremendo idee… il nuovo sito è in arrivo</h1>
+        <p class="mt-4 text-[var(--marrone)]/70">Presto potrai scoprire i nostri oli, le varietà, i metodi di produzione e acquistare direttamente dal frantoio. Nel frattempo, iscriviti per ricevere aggiornamenti e lanci esclusivi.</p>
+
+        <form class="mt-6 flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault(); alert('Grazie! Ti contatteremo presto.');">
+          <input aria-label="Email" type="email" required placeholder="La tua email" class="flex-1 px-4 py-3 rounded-lg border border-[var(--pesca)] focus:outline-none" />
+          <button class="px-4 py-3 rounded-lg bg-[var(--terracotta)] text-white font-medium hover:brightness-95">Iscriviti</button>
+        </form>
+
+        <div class="mt-6 flex items-center gap-4 text-sm text-[var(--marrone)]/80">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 12h18" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4 7h16M4 17h16" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <span>Produzione locale — Spedizioni nazionali</span>
+        </div>
+
+        <footer class="mt-8 text-xs text-[var(--marrone)]/60">© <span id="year"></span> Olio Samnium - Tutti i diritti riservati.</footer>
+      </div>
+
+      <aside class="p-6 rounded-2xl bg-white shadow-lg flex flex-col justify-between">
+        <div>
+          <img src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='800' height='480' viewBox='0 0 800 480'><rect fill='%23f8edd8' width='800' height='480'/><g fill='none' stroke='%239e9c5c' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'><path d='M100 360c80-120 240-120 320-40 80 80 160 40 220-40'/><path d='M200 240c40-60 140-60 200-20 60 40 100 20 140-20'/></g><circle cx='640' cy='360' r='36' fill='%23a95a18'/></svg>" alt="Illustrazione ulivo" class="w-full rounded-lg mb-6" />
+
+          <h3 class="text-lg font-semibold text-[var(--marrone)]">Goccia dopo goccia...</h3>
+          <p class="mt-2 text-[var(--marrone)]/70">Dalla nostra terra alla tua tavola: qualità, tradizione e olio extra vergine spremuto con cura.</p>
+
+          <dl class="mt-4 grid grid-cols-2 gap-3 text-sm">
+            <div class="p-3 bg-[rgba(224,184,115,0.15)] rounded-lg">
+              <dt class="text-xs text-[var(--marrone)]/70">Varietà</dt>
+              <dd class="font-medium text-[var(--marrone)]">Cultivar locali</dd>
+            </div>
+            <div class="p-3 bg-[rgba(224,184,115,0.15)] rounded-lg">
+              <dt class="text-xs text-[var(--marrone)]/70">Raccolta</dt>
+              <dd class="font-medium text-[var(--marrone)]">A mano & meccanica</dd>
+            </div>
+          </dl>
+        </div>
+
+
+      </aside>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
